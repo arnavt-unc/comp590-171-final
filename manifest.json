@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Extension Adblocker",
+    "version": "1.0",
+    "description": "Extension Adblocker Feature",
+    "permissions": ["declarativeNetRequest"],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "Adblock/rules.json"
+            }
+        ]
+
+    },
+    "icons": {
+        "16": "Adblock/lock_16x16.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
