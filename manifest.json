@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Credential Manager",
+  "version": "1.0",
+  "description": "Manage and auto-fill login credentials securely across different websites.",
+  "permissions": ["storage","activeTab"],
+  "background": {
+    "service_worker": "background.js"
+},
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
