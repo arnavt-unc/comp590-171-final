@@ -1,12 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Credential Manager",
+  "name": "Session Cookie Manager",
   "version": "1.0",
-  "description": "Manage and auto-fill login credentials securely across different websites.",
-  "permissions": ["storage","activeTab", "cookies"],
+  "description": "Manage and store session cookies securely across different websites, and inject them to maintain login sessions.",
+  "permissions": ["storage", "tabs", "webNavigation", "cookies", "activeTab", "scripting"],
   "background": {
     "service_worker": "background.js"
-},
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"
@@ -14,8 +14,7 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["contentScript.js"],
-      "run_at": "document_end"
+      "js": ["contentscript.js"]
     }
   ],
   "host_permissions": [
