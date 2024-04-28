@@ -7,6 +7,7 @@
   "background": {
     "service_worker": "background.js"
   },
+  "incognito": "spanning",
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"
@@ -21,4 +22,5 @@
     "http://*/*",
     "https://*/*"
   ]
+
 }
