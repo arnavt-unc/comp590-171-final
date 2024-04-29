@@ -1,9 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "Extension Adblocker",
+    "name": "Privacy Extension",
     "version": "1.0",
-    "description": "Extension Adblocker Feature",
-    "permissions": ["declarativeNetRequest"],
+    "description": "Privacy Enhancing Browser Extension",
+    "permissions": ["declarativeNetRequest", "storage", "tabs", "webNavigation", "cookies", "activeTab", "scripting"],
     "declarative_net_request": {
         "rule_resources": [
             {
@@ -14,10 +14,25 @@
         ]
 
     },
+    "background": {
+        "service_worker": "Cookie-saver/background.js"
+    },
+    "incognito": "spanning",
+    "action": {
+        "default_popup": "Cookie-saver/popup.html"
+    },
+    
     "icons": {
         "16": "Adblock/lock_16x16.png"
     },
-    "action": {
-        "default_popup": "popup.html"
-    }
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["contentscript.js"]
+        }
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ]
 }
