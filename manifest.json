@@ -4,6 +4,9 @@
     "version": "1.0",
     "description": "Extension Adblocker Feature",
     "permissions": ["declarativeNetRequest"],
+    "background": {
+        "service_worker": "scripts/blocklist.js"
+    },
     "declarative_net_request": {
         "rule_resources": [
             {
@@ -12,7 +15,6 @@
                 "path": "Adblock/rules.json"
             }
         ]
-
     },
     "icons": {
         "16": "Adblock/lock_16x16.png"
