@@ -3,7 +3,8 @@
     "name": "Extension Adblocker",
     "version": "1.0",
     "description": "Extension Adblocker Feature",
-    "permissions": ["declarativeNetRequest"],
+    "permissions": ["declarativeNetRequest","declarativeNetRequestFeedback", "webRequest", "notifications"],
+    "host_permissions": ["<all_urls>"],
     "background": {
         "service_worker": "scripts/blocklist.js"
     },
