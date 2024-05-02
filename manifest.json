@@ -28,7 +28,7 @@
     "content_scripts": [
         {
             "matches": ["http://*/*", "https://*/*"],
-            "js": ["contentscript.js"]
+            "js": ["Cookie-saver/contentscript.js"]
         }
     ],
     "host_permissions": [
