@@ -3,7 +3,7 @@
     "name": "Privacy Extension",
     "version": "1.0",
     "description": "Privacy Enhancing Browser Extension",
-    "permissions": ["declarativeNetRequest", "storage", "tabs", "webNavigation", "cookies", "activeTab", "scripting"],
+    "permissions": ["declarativeNetRequest", "storage", "tabs", "webNavigation", "cookies", "activeTab", "scripting", "declarativeNetRequestFeedback", "webRequest", "notifications"],
     "declarative_net_request": {
         "rule_resources": [
             {
@@ -33,6 +33,7 @@
     ],
     "host_permissions": [
         "http://*/*",
-        "https://*/*"
+        "https://*/*",
+        "<all_urls>"
     ]
 }
