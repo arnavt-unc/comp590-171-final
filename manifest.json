@@ -15,7 +15,7 @@
 
     },
     "background": {
-        "service_worker": "Cookie-saver/background.js"
+        "service_worker": "background.js"
     },
     "incognito": "spanning",
     "action": {
@@ -23,7 +23,7 @@
     },
     
     "icons": {
-        "16": "Adblock/lock_16x16.png"
+        "16": "lock_16x16.png"
     },
     "content_scripts": [
         {
