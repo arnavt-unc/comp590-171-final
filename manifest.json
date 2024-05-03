@@ -1,9 +1,13 @@
 {
     "manifest_version": 3,
-    "name": "Extension Adblocker",
+    "name": "Privacy Enhancing Extension",
     "version": "1.0",
-    "description": "Extension Adblocker Feature",
-    "permissions": ["declarativeNetRequest"],
+    "description": "Chrome Extension that implements features to ensure a private searching session",
+    "key" : "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlibldCrI1iolCp8HG/rOltBLrJalDOPcbd2+9MapdJpTttZg+dUmuUJRG+gETJWc5sDEMcY8sRdKr7XGEhjZECZnMyIw5Dyl8nwevu2eahxDrvFjj9TpwiAUNjAhKubkeQxsOy7+t7YtWEiQn0SVBZy3nwBflzlHe4n4aHyQz3+1wS/YK2AHs4v2dubuA++IkD7aIwRszXw/lygcruYptBk3MQu7gqyHK/yDuJHZJi4lmZzLlxH2lZAsZpsJPGdDeIbyrlA0BKQThDwTSQ+ZRHpNt+BL7rXML8KN7N8RC7iNlXlNcywPJz2p6nKK1KoXZ9hX2/Ynw9F8P90P1Jec2wIDAQAB",
+    "permissions": [
+        "declarativeNetRequest",
+        "identity"
+    ],
     "declarative_net_request": {
         "rule_resources": [
             {
@@ -19,5 +23,13 @@
     },
     "action": {
         "default_popup": "popup.html"
+    },
+    "background" : {
+        "service-worker" : "service-worker.js"
+    },
+    "oauth2" : {
+        "client_id" : "730526965793-jajksm5k9ns2ro10qgrnqlk5ubd4l85s.apps.googleusercontent.com",
+        "scopes":[""]
     }
+
 }
