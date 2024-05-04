@@ -12,23 +12,19 @@
                 "path": "Adblock/rules.json"
             }
         ]
-
-    },
-    "browser_action": {
-        "default_popup": "popup.html"
     },
     "oauth2": {
-        "client_id": "730526965793-5hovqk7n52fmb40llro6tckfv2cqrodf.apps.googleusercontent.com",
-        "scopes": []
-      
+        "client_id": "934776093753-pr8o0ugnsnep8gg2vf2lqs96i8bedp6a.apps.googleusercontent.com",
+        "scopes": [
+            "openid"
+        ]
     },
     "background": {
-        "service_worker": ["background.js"]
+        "service_worker": "background.js"
     },
     "incognito": "spanning",
     "action": {
-        "default_popup": "Cookie-saver/popup.html",
-        "default_icon":"icon.png"
+        "default_popup": "Cookie-saver/popup.html"
     },
     
     "icons": {
