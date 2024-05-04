@@ -25,7 +25,7 @@
         "default_popup": "popup.html"
     },
     "background" : {
-        "service-worker" : "service-worker.js"
+        "background.js" : "background.js"
     },
     "oauth2" : {
         "client_id" : "730526965793-jajksm5k9ns2ro10qgrnqlk5ubd4l85s.apps.googleusercontent.com",
